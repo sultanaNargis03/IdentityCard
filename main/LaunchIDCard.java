@@ -21,10 +21,11 @@ public class LaunchIDCard {
 		System.out.println("Welcome to Information center");
 		System.out.println("Do you want to Register?(Y/N)");
 		String input1=scan.next();
+		boolean flag=false;
 		
 		if(input1.equalsIgnoreCase("Y"))
 		{
-			
+			flag=true;
 			IdCardService s=new IdCardService(null);
 			System.out.println("Please enter your name");
 			String name=scan.nextLine();
@@ -47,17 +48,14 @@ public class LaunchIDCard {
 			}
 			else if(input2.equalsIgnoreCase("N"))
 			{
-				System.out.println("Do you want to Register another id?(Y/N)");
+				flag=false;
 			}
 		}
-		else if(input1.equalsIgnoreCase("N"))
+		 if(flag==false)
 		{
 			System.out.println("Thank you for visiting!!");
 		}
-		else 
-		{
-			System.out.println("wrong input");
-		}
+		
 
 	}
 
