@@ -50,9 +50,13 @@ public class LaunchIDCard {
 				System.out.println("Do you want to Register another id?(Y/N)");
 			}
 		}
-		else
+		else if(input1.equalsIgnoreCase("N"))
 		{
 			System.out.println("Thank you for visiting!!");
+		}
+		else 
+		{
+			System.out.println("wrong input");
 		}
 
 	}
